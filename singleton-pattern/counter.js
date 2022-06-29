@@ -28,4 +28,4 @@ class Counter{
 
 // we are freezing this object so that no one can modify the properties of this object
 const counterObj = Object.freeze(new Counter())
-module.exports =  counterObj
+export default counterObj

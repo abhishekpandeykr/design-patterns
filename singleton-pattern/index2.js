@@ -1,7 +1,14 @@
-const counterObj = require("./counter")
-counterObj.increment()
-counterObj.increment()
+import counterObj from './counter.js'
 
-counterObj.increment()
 
-counterObj.increment()
+const setValue = () => {
+    const value = counterObj.count()
+    const elementToWrite = document.getElementById("count")
+    elementToWrite.innerText = value
+}
+
+const secondBtn = document.getElementById("second-button")
+secondBtn.addEventListener("click", () => {
+    counterObj.decrement()
+    setValue()
+})

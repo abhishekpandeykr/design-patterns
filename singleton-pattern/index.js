@@ -1,7 +1,15 @@
-const counterObj = require("./counter")
-require("./index2")
+import counterObj from './counter.js'
+import "./index2.js"
 
-counterObj.increment()
-// output will be 5, because we have incremented the count value in index2 file and
-// our state in global in pattern file
-console.log("counter is", counterObj.count())
+
+const setValue = () => {
+    const value = counterObj.count()
+    const elementToWrite = document.getElementById("count")
+    elementToWrite.innerText = value
+}
+
+const firstButton = document.getElementById("first-button")
+firstButton.addEventListener('click', () => {
+    counterObj.increment()
+    setValue()
+})
