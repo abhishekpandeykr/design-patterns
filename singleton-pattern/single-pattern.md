@@ -7,5 +7,5 @@ We can create a singleton Pattern with [Object](/singleton-pattern/counterWithOb
 ***Singletons patterns*** are best for **managing the global state**.
 
 ### Disadavntages
-Singletons are not encouraged in Javascript, it is considerd as the Anti Patter. Event
+Singletons are not encouraged in Javascript, it is considerd as the Anti Pattern i.e. having global variable is generally considerd as bad design decision. Even
 though we can save a whole lot of memory by creating one instance of a class.
