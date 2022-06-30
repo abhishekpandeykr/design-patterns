@@ -4,3 +4,4 @@
 
 1. [SingletonPattern](/singleton-pattern/single-pattern.md)
 2. [Proxy Pattern](/proxy-pattern/proxy-pattern.md)
+3. [Mixin Pattern](/MixinPattern/mixin-pattern.md)
