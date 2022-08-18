@@ -5,13 +5,17 @@ import DashboardNav from './components/DashboardNav'
 import DashboardContent from './components/DashboardContent'
 import Header from './components/Header'
 import Login from './components/Login'
+import SplitPane from './secondComponents/splitPane'
+import Contacts from './secondComponents/Contacts'
+import Chat from './secondComponents/Chat'
+import WelcomeMessage from './components/WelcomeMessage'
 
 function App() {
   const [currentUser, setCurrentUser] = useState()
 
   return (
     <div className="App">
-      <div style={{background:"lightgray"}}>
+      <div style={{background:"lightgray"}} className="text-3xl font-bold underline">
         <Header />
       </div>
       {/* Before Compose */}
@@ -26,14 +30,25 @@ function App() {
         {currentUser ? (<Dashboard>
           <DashboardNav />
           <DashboardContent>
-            <WEllcomeMessage user={currentUser} />
+            <WelcomeMessage user={currentUser} />
           </DashboardContent>
         </Dashboard>) :
                       (<Login onLogin={() => setCurrentUser("Abhishek")} />)
         }
       </div>
       <div style={{background:"lightgray"}}>
-        {/* <Footer /> */}
+        {/* <div className='flex flex-grow'>
+          <div className='basis-1/2'>
+            Test
+          </div>
+          <div className='basis-1/2'>
+            Test 2
+          </div>
+        </div> */}
+        {currentUser && <SplitPane left={<Contacts />} right={
+            <Chat welcomeMsg={<WelcomeMessage user={currentUser} />}/>
+          } 
+        />}
       </div>
     </div>
   )

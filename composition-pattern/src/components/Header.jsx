@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <div>
-        <img src="https://reactjs.org/logo-og.png" alt="React Logo" />
+            <h3>This is fun</h3>
         </div>
     )
 }
