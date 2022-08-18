@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Dashboard from './components/Dashboard'
+import DashboardNav from './components/DashboardNav'
+import DashboardContent from './components/DashboardContent'
 import Header from './components/Header'
 import Login from './components/Login'
 
@@ -12,8 +14,21 @@ function App() {
       <div style={{background:"lightgray"}}>
         <Header />
       </div>
-      <div style={{flex:1}}>
+      {/* Before Compose */}
+      {/* <div style={{flex:1}}>
         {currentUser ? (<Dashboard user={currentUser} />) : 
+                      (<Login onLogin={() => setCurrentUser("Abhishek")} />)
+        }
+      </div> */}
+
+      {/* After Compose */}
+      <div style={{flex:1}}>
+        {currentUser ? (<Dashboard>
+          <DashboardNav />
+          <DashboardContent>
+            <WEllcomeMessage user={currentUser} />
+          </DashboardContent>
+        </Dashboard>) :
                       (<Login onLogin={() => setCurrentUser("Abhishek")} />)
         }
       </div>
