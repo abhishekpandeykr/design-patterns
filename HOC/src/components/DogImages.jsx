@@ -10,11 +10,11 @@ const DogImages = (props) => {
     return props.data.message.map((dog, index) => <img src={dog} alt="Dog" key={index} />)
 }
 
-
-// export default compose(withHovering, withLoader)(DogImages, 'https://dog.ceo/api/breed/labrador/images/random/6')
-export default withHovering(
-    withLoader(
-        DogImages,
-        'https://dog.ceo/api/breed/pomeranian/images/random/6'
-    )
-)
+const composedHOCs = compose(withHovering, withLoader)
+export default composedHOCs(DogImages, 'https://dog.ceo/api/breed/labrador/images/random/6')
+// export default withHovering(
+//     withLoader(
+//         DogImages,
+//         'https://dog.ceo/api/breed/pomeranian/images/random/6'
+//     )
+// )
