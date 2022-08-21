@@ -1,6 +1,6 @@
 import { RepoInfo } from "./RepoInfo";
 
-export const RepoContainer = ({resource}) => {
+const RepoContainer = ({resource}) => {
     const repositoryList = resource.read();
     return (
         <div className="repoContainer">
@@ -8,3 +8,5 @@ export const RepoContainer = ({resource}) => {
         </div>
     )
 }
+
+export default RepoContainer

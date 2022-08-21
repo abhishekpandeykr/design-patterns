@@ -1,10 +1,10 @@
-import { useTransition } from "react";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, lazy, useTransition } from "react";
 import { getStatusChecker, getResourceFromCacheOrFetch } from "../services/serviceHelper";
 import ErrorBoundary from "./ApplicationErrorBoundry";
-import { RepoContainer } from "./RepoContainer";
 
 const tabs = ["facebook", "github", "instagram", "linkedin", "twitter", "google", "airbnb"];
+
+const RepoContainer = lazy(() => import("./RepoContainer"));
 
 export const DynamicRepoTab = () => {
     const [activeTab, setActiveTab] = useState(tabs[0]);
