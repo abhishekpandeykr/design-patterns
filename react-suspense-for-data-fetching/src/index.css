@@ -69,6 +69,12 @@ button:focus-visible {
   }
 }
 
+.toggleApproach {
+  position: absolute;
+  left: 10px;
+  background: lightgreen;
+}
+
 
 .repoContainer{
   width: 100% !important;
@@ -93,4 +99,23 @@ button:focus-visible {
   width: 100px;
   height: 100%;
   margin-right: 10px;
+}
+
+h3 span {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #646cff;
+}
+
+.origanizationList{
+  width:100%;
+  display: flex;
+  gap: 15px;
+}
+
+.organization.active {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #f9f9f9;
+  background-color: #213547;
 }

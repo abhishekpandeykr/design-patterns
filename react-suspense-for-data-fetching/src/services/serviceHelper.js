@@ -1,3 +1,5 @@
+const apiCache = {}
+
 export function getStatusChecker(promiseIn){
     let status = "PENDING";
 
@@ -32,4 +34,13 @@ export function getStatusChecker(promiseIn){
 
         }
     }
+}
+
+export const getResourceFromCacheOrFetch = (name, value) => {
+    let resource = apiCache[name];
+    if(!resource){
+        resource = value
+        apiCache[name] = resource;
+    }
+    return resource;
 }
