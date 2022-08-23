@@ -8,7 +8,7 @@ export default function AddCharacter(props) {
             <input 
                 type={"text"}
                 value={character}
-                placeholder="Enter Your Character Name"
+                placeholder="Search Your Language"
                 onChange={e => setCharacter(e.target.value)}
             />
             {props.render(character)}

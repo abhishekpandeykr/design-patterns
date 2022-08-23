@@ -3,6 +3,7 @@ import './App.css'
 import DogImages from './components/DogImages'
 import withStyles from './hoc/withStyle'
 import AddCharacter from './renderProps/AddCharacter'
+import LanguageFacts from './renderProps/LanguageFacts'
 import StaticText from './renderProps/StaticText'
 
 const Button = () => <button>Click Me!!!</button>
@@ -24,7 +25,8 @@ const renderProps = () => (
   <>
     <StaticText render={() => <h1>Hi there from Render Props</h1>} />
     <AddCharacter render={value => (<>
-      <h1>{value}</h1>  
+      {value && <LanguageFacts searchTerm={value} />}
+      {!value && <h6>Please Search Your Indian Known Language</h6>}
     </>)
   } />
   </>
