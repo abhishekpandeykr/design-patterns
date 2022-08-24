@@ -8,3 +8,4 @@
 4. [Observer Pattern](/observerPattern/observer-pattern.md)
 5. [Middleware Pattern](/middleWare-pattern/middle-ware-pattern.md)
 6. [FlyWeight Pattern](/flyweight-pattern/)
+7. [Factory Pattern](/factory-pattern/)
