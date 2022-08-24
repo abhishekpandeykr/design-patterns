@@ -7,3 +7,4 @@
 3. [Mixin Pattern](/MixinPattern/mixin-pattern.md)
 4. [Observer Pattern](/observerPattern/observer-pattern.md)
 5. [Middleware Pattern](/middleWare-pattern/middle-ware-pattern.md)
+6. [FlyWeight Pattern](/flyweight-pattern/)
